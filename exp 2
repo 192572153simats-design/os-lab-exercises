@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *a = fopen("input.txt", "r");
+    FILE *b = fopen("output.txt", "w");
+    char c;
+
+    while ((c = fgetc(a)) != EOF)
+        fputc(c, b);
+
+    fclose(a);
+    fclose(b);
+
+    return 0;
+}
