@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int bt[4]={10,5,8,6};
+    int tq=2, i;
+
+    printf("Round Robin Order:\n");
+
+    while(bt[0]||bt[1]||bt[2]||bt[3])
+    {
+        for(i=0;i<4;i++)
+        {
+            if(bt[i]>0)
+            {
+                printf("P%d ", i+1);
+                bt[i]-= (bt[i]>=tq)?tq:bt[i];
+            }
+        }
+    }
+
+    return 0;
+}
