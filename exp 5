@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int p[5]={3,1,4,2,5}, bt[5]={6,2,8,4,5};
+    int i,j,t;
+
+    for(i=0;i<5;i++)
+        for(j=i+1;j<5;j++)
+            if(p[i]>p[j])
+            {
+                t=p[i]; p[i]=p[j]; p[j]=t;
+                t=bt[i]; bt[i]=bt[j]; bt[j]=t;
+            }
+
+    printf("Priority Order:\n");
+    for(i=0;i<5;i++)
+        printf("P%d BT=%d\n", p[i], bt[i]);
+
+    return 0;
+}
