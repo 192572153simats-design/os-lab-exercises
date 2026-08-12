@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    char user[20], file[20];
+
+    scanf("%s",user);
+    scanf("%s",file);
+
+    printf("User: %s\nFile: %s\n",user,file);
+
+    return 0;
+}
