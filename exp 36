@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int b[5],i;
+
+    printf("Enter 5 blocks:\n");
+
+    for(i=0;i<5;i++)
+        scanf("%d",&b[i]);
+
+    printf("Linked Allocation:\n");
+
+    for(i=0;i<5;i++)
+    {
+        printf("%d",b[i]);
+
+        if(i<4)
+            printf(" -> ");
+    }
+
+    printf(" -> NULL");
+
+    return 0;
+}
