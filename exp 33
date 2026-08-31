@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int page[5]={1,2,3,4,5};
+    int frame[3]={-1,-1,-1};
+    int i,j,fault=0;
+
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<3;j++)
+            if(frame[j]==page[i])
+                break;
+
+        if(j==3)
+        {
+            frame[fault%3]=page[i];
+            fault++;
+        }
+    }
+
+    printf("Page Faults = %d\n",fault);
+
+    return 0;
+}
