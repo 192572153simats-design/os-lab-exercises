@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main()
+{
+    int fd;
+
+    fd = open("file.txt", O_CREAT | O_WRONLY, 0644);
+
+    write(fd,"Hello Linux",11);
+
+    printf("File created successfully\n");
+    printf("Data written successfully\n");
+
+    close(fd);
+
+    return 0;
+}
