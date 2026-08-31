@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+
+    fp = fopen("file.txt","w");
+    fprintf(fp,"Hello World");
+    fclose(fp);
+
+    printf("File created\n");
+
+    fp = fopen("file.txt","r");
+    printf("File opened\n");
+    fclose(fp);
+
+    remove("file.txt");
+    printf("File deleted\n");
+
+    return 0;
+}
