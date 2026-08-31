@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[5],head,i,total=0;
+
+    printf("Enter 5 requests:\n");
+
+    for(i=0;i<5;i++)
+        scanf("%d",&a[i]);
+
+    printf("Enter head position: ");
+    scanf("%d",&head);
+
+    for(i=0;i<5;i++)
+    {
+        total += abs(head-a[i]);
+        head=a[i];
+    }
+
+    printf("Total Head Movement = %d\n",total);
+
+    return 0;
+}
